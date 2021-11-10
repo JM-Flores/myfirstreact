@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import Greet from './components/Greet'
+import Message from './components/Message'
+import Button from './components/Button'
 
 function App() {
   return (
@@ -9,6 +12,10 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload. -jm1
         </p>
+        <Greet name="Peter" heroName = "spiderman"> 
+          <Message/>
+          <Button></Button>
+        </Greet>
         <a
           className="App-link"
           href="https://reactjs.org"
