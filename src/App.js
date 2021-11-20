@@ -3,6 +3,8 @@ import './App.css';
 import Greet from './components/Greet'
 import Message from './components/Message'
 import Button from './components/Button'
+import Hello from './components/Hello';
+import Employee from './components/Employee';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload. -jm1
         </p>
+        <p>{Employee()}</p>
+        <p>{Hello()}</p>
         <Greet name="Peter" heroName = "spiderman"> 
           <Message/>
           <Button></Button>
