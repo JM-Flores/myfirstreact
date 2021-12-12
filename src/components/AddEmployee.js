@@ -39,23 +39,23 @@ const AddEmployee = () =>{
         }  
     }
 
+    
     useEffect(() =>{
             if(employeeId){
                 employeeService.getEmployee(employeeId)
-                .then(
-                    employee =>{
-                        setName(employee.data.name);
-                        setLocation(employee.data.location);
-                        setDepartment(employee.data.department);
-                    }
-                )
-                .catch(
-                    error =>{
-                        console.error("something went wrong!", error)
-                    }
-                )
+                .then(response =>{
+                    setName(response.data.name);
+                    setLocation(response.data.location);
+                    setDepartment(response.data.department);
+                    document.getElementById("name").defaultValue = response.data.name;
+                    document.getElementById("location").defaultValue = response.data.location;
+                    document.getElementById("department").defaultValue = response.data.department;
+                })
+                .catch(error =>{
+                    console.log("something went wrong!", error)
+                })
             }
-        }
+        },[]
     )
 
     return(
